@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MrGuineaBird</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Fake broken screen -->
+  <div id="fake-error">
+    <h2>ERROR 404: WEBSITE TOO AWESOME</h2>
+    <p>pls reload (do not)</p>
+  </div>
+
+  <!-- Main content -->
+  <h1>MrGuineaBird</h1>
+  <p>game dev idiot website</p>
+
+  <div class="buttons">
+    <a href="#">games</a>
+    <a href="#">about</a>
+    <a href="#">???</a>
+  </div>
+
+  <!-- Under construction gifs -->
+  <img src="https://i.imgur.com/8Km9tLL.gif" class="construction left">
+  <img src="https://i.imgur.com/8Km9tLL.gif" class="construction right">
+
+  <!-- Jumpscare -->
+  <img src="https://i.imgur.com/Z6XbE0H.png" id="scare">
+
+  <!-- Jumpscare logic -->
+  <script>
+    document.querySelectorAll('.buttons a').forEach(btn => {
+      btn.addEventListener('mouseenter', () => {
+        document.getElementById('scare').style.opacity = 1;
+      });
+      btn.addEventListener('mouseleave', () => {
+        document.getElementById('scare').style.opacity = 0;
+      });
+    });
+  </script>
+
+</body>
+</html>
