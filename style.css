@@ -1,0 +1,110 @@
+/* Base stupid style */
+body {
+  margin: 0;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  background: linear-gradient(45deg, #ff00ff, #00ffff);
+  color: black;
+  text-align: center;
+  min-height: 100vh;
+  cursor: crosshair;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-top: 20vh;
+  text-shadow: 4px 4px white;
+  animation: wobble 2s infinite;
+}
+
+h1:hover {
+  cursor: wait;
+}
+
+p {
+  font-size: 1.5rem;
+  background: yellow;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 4px dashed red;
+}
+
+/* Buttons */
+.buttons {
+  margin-top: 30px;
+}
+
+.buttons a {
+  text-decoration: none;
+  color: black;
+  background: lime;
+  padding: 12px 18px;
+  margin: 8px;
+  display: inline-block;
+  border: 3px solid black;
+  box-shadow: 4px 4px black;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.buttons a:hover {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 black;
+  cursor: help;
+}
+
+/* Under construction gifs */
+.construction {
+  position: fixed;
+  width: 150px;
+  z-index: 999;
+}
+
+.construction.left {
+  bottom: 10px;
+  left: 10px;
+}
+
+.construction.right {
+  top: 10px;
+  right: 10px;
+}
+
+/* Fake broken overlay */
+#fake-error {
+  position: fixed;
+  inset: 0;
+  background: black;
+  color: lime;
+  font-family: monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: vanish 3s forwards;
+}
+
+@keyframes vanish {
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; pointer-events: none; }
+}
+
+/* Jumpscare */
+#scare {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.05s;
+  z-index: 2000;
+}
+
+/* Dumb wobble */
+@keyframes wobble {
+  0% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+  100% { transform: rotate(-2deg); }
+}
